@@ -1,0 +1,157 @@
+
+        .sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4f46e5 0%, #818cf8 100%);
+            padding: 20px;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff !important;
+            transform: translateX(5px);
+        }
+        .nav-link i {
+            width: 24px;
+        }
+        .user-profile {
+            padding: 20px;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 30px;
+        }
+        .user-profile img {
+            width: 80px;
+            height: 80px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        .form-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .form-card:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+        }
+        .form-control, .form-select {
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+        }
+        .image-preview {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            border: 2px dashed #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            margin-top: 0.5rem;
+        }
+        .image-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        .image-preview .upload-text {
+            text-align: center;
+            color: #6b7280;
+        }
+        .tips-card {
+            border: none;
+            border-radius: 12px;
+            background-color: #f8fafc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .tips-card .card-header {
+            background-color: transparent;
+            border-bottom: none;
+            padding: 1.5rem;
+        }
+        .tips-card .card-body {
+            padding: 0 1.5rem 1.5rem;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tips-list li {
+            display: flex;
+            align-items: start;
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+        .tips-list li i {
+            color: #4f46e5;
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+        }
+        .modal-confirm {
+            color: #636363;
+            width: 400px;
+            margin: 30px auto;
+        }
+        .modal-confirm .modal-content {
+            padding: 20px;
+            border-radius: 12px;
+            border: none;
+        }
+        .modal-confirm .modal-header {
+            border-bottom: none;   
+            position: relative;
+            justify-content: center;
+        }
+        .modal-confirm h4 {
+            text-align: center;
+            font-size: 26px;
+            margin: 30px 0 -15px;
+        }
+        .modal-confirm .icon-box {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 50%;
+            z-index: 9;
+            text-align: center;
+            border: 3px solid #f15e5e;
+        }
+        .modal-confirm .icon-box i {
+            color: #f15e5e;
+            font-size: 46px;
+            display: inline-block;
+            margin-top: 13px;
+        }
+        .modal-confirm .btn {
+            color: #fff;
+            border-radius: 8px;
+            min-width: 120px;
+            min-height: 40px;
+        }
+        .modal-confirm .btn-secondary {
+            background: #c1c1c1;
+        }
+        .modal-confirm .btn-danger {
+            background: #f15e5e;
+        }
+        .modal-confirm .btn-danger:hover {
+            background: #ee3535;
+        }
