@@ -1,8 +1,9 @@
-  // Check session and redirect if not logged in
-  fetch('../php/check_session.php')
+// Check session and redirect if not logged in
+fetch('../php/check_session.php')
   .then(response => response.json())
   .then(data => {
       if (!data.loggedIn) {
+          // Redirect to login page if user is not logged in
           window.location.href = '../login.html';
       }
   })
@@ -15,30 +16,34 @@
 fetch('../php/get_current_user.php')
   .then(response => response.json())
   .then(data => {
-      const name = data.name || 'User';
-      document.getElementById('userName').textContent = name;
+      // Display user name and email
+      document.getElementById('userName').textContent = data.name || 'User';
       document.getElementById('userEmail').textContent = data.email || '';
   })
   .catch(error => console.error('Error:', error));
 
-// Image preview function
+// Function to preview image from URL
 function previewImageUrl(url) {
   const preview = document.getElementById('imagePreview');
   const uploadText = document.getElementById('uploadText');
   
   if (url && url.trim() !== '') {
-      // Create a temporary image to test if the URL is valid
       const tempImage = new Image();
+      
       tempImage.onload = function() {
+          // Show the image if URL is valid
           preview.src = url;
           preview.style.display = 'block';
           uploadText.style.display = 'none';
       };
+      
       tempImage.onerror = function() {
+          // Hide the image and show error message if URL is invalid
           preview.style.display = 'none';
           uploadText.style.display = 'block';
-          alert('Invalid image URL or image not accessible. Please check the URL and try again.');
+          alert('Invalid image URL. Please check and try again.');
       };
+      
       tempImage.src = url;
   } else {
       preview.style.display = 'none';
@@ -47,10 +52,11 @@ function previewImageUrl(url) {
 }
 
 // Form validation and submission
-document.getElementById('eventForm').addEventListener('submit', function(e) {
+const eventForm = document.getElementById('eventForm');
+eventForm.addEventListener('submit', function(e) {
   e.preventDefault();
   
-  // Basic form validation
+  // Get form values
   const title = document.getElementById('eventTitle').value;
   const description = document.getElementById('eventDescription').value;
   const date = document.getElementById('eventDate').value;
@@ -59,13 +65,14 @@ document.getElementById('eventForm').addEventListener('submit', function(e) {
   const category = document.getElementById('eventCategory').value;
   const imageUrl = document.getElementById('imageUrl').value;
   
+  // Check if all fields are filled
   if (!title || !description || !date || !time || !location || !category || !imageUrl) {
       alert('Please fill in all required fields');
       return;
   }
   
   // Submit the form
-  this.submit();
+  eventForm.submit();
 });
 
 // Set minimum date to today

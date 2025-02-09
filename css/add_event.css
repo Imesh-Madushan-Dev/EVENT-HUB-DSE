@@ -19,17 +19,7 @@
         .nav-link i {
             width: 24px;
         }
-        .user-profile {
-            padding: 20px;
-            border-radius: 12px;
-            background-color: rgba(255, 255, 255, 0.1);
-            margin-bottom: 30px;
-        }
-        .user-profile img {
-            width: 80px;
-            height: 80px;
-            border: 3px solid rgba(255, 255, 255, 0.2);
-        }
+       
         .form-card {
             border: none;
             border-radius: 12px;
